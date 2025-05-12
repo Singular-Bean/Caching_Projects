@@ -52,6 +52,7 @@ if ultimatum == "1":
 
 
     def get_league_id_and_season_id(league_name):
+        league_name = league_name.replace(" ", "%20")
         leagueid = \
             fetch_and_parse_json(f"{prefix}api/v1/search/all?q={league_name}&page=0")['results'][0]['entity'][
                 'id']
@@ -570,6 +571,7 @@ elif ultimatum == "2":
 
 
     def get_league_id_and_season_id(league_name):
+        league_name = league_name.replace(" ", "%20")
         leagueid = \
             fetch_and_parse_json(f"http://www.sofascore.com/api/v1/search/all?q={league_name}&page=0")['results'][0][
                 'entity'][
