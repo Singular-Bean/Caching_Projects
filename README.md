@@ -4,7 +4,7 @@ error if I hit the API too many times in a day.
 # Possible Finishes:
 
 Relatively simple script to determine the possible finishing positions of every team in a league, 
-given the league name. At the beginning, the program asks the user if they would like to use caching,
+given the league name. In the beginning, the program asks the user if they would like to use caching,
 skip the caching and fetch from the website, or use a pre-prepared dataset from the premier league.
 I added the last option because if the season is finished, it's just going to output the final 
 league positions as the possible finishing positions, which is pointless. So this last option is for 
@@ -47,7 +47,7 @@ possible finishing position, it simulates the remaining games with teams above t
 losing all their games, and teams below the selected team winning all their games. To make up for 
 any differences in goal difference making an effect, the simulation makes winning teams win by the 
 largest winning margin in premier league history (9–0). For matches between teams which are either 
-both above or both below the selected team, it simulates every possible outcome, and then finds 
+both above or both below the selected team, it simulates every possible outcome and then finds 
 the maximum finishing position. This whole process is then repeated to find the lowest possible
 finishing position, but the other way round.
 
@@ -91,13 +91,13 @@ finding players from the premier league who are similar in profile to Lamine Yam
 
 Although the program is only using 5 numbers, I think this has worked quite well because it has 
 mainly returned wingers, or other very technically minded players. This could potentially be used to 
-find replacements for players who are aging or on their way out, from leagues which are maybe 
-under-valued in the transfer market. Another way this could potentially be used is to see how rare a
-player's profile is. For example, if you run the program and all of the residuals are very high, it 
-could mean that the player has a very unique profile.
+find replacements for players who are aging or on their way out, with players from leagues which are 
+maybe undervalued in the transfer market. Another way this could potentially be used is to see how 
+rare aplayer's profile is. For example, if you run the program and all of the returned residuals are 
+very high, it could mean that the player has a unique profile.
 
 Below is a screenshot from sofascore's "compare attribute penetagons" feature, comparing Lamine
-Yamal (greem) with Noni Madueke (blue). I think that this shows that the pentagons have similar
-shapes, even though the sizees are different because of the different skill levels of the players:
+Yamal (green) with Noni Madueke (blue). I think that this shows that the pentagons have similar
+shapes, even though the sizes are different because of the different skill levels of the players:
 
 ![img.png](img.png)
