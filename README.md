@@ -101,3 +101,65 @@ Yamal (green) with Noni Madueke (blue). I think that this shows that the pentago
 shapes, even though the sizes are different because of the different skill levels of the players:
 
 ![img.png](img.png)
+
+# Average Form:
+
+This script is based off the idea that in a league season, everyone plays the same teams but it's
+possible that, by chance, you'll play more teams that are in good form than bad form. for example,
+lets say Team A plays Team B twice in a season, at the beginning and at the end, but Team C plays 
+Team B twice in the middle of the season. It's possible that Team B are in good form at the
+beginning of the season, hit a bad spell in the middle, and then get back to good form at the end.
+Then, even though Team A and Team C have played the same team, Team A's fixture list is harder because
+they had to play Team B when they were in good form, than Team C who played them when they were in bad
+form.
+
+This program uses the sofascore feature where you can see a team's form in the leadup to a certain
+fixture, for example it may show [WDWLD], implying that the team's last results were win, draw,
+win, loss, draw, and then the upcoming fixture. The program uses this to find the average points
+per game in the last 5 games for their opposition, for each team in the league. It then prints
+the results for all the teams in the league, sorted by the highest average points per game against.
+
+An example of what this looks like is below:
+
+```
+Leeds United: 1.53 (45 games included)
+Burnley: 1.48 (45 games included)
+Norwich City: 1.47 (45 games included)
+Derby County: 1.46 (45 games included)
+Preston North End: 1.45 (45 games included)
+Sunderland: 1.43 (44 games included)
+Plymouth Argyle: 1.41 (45 games included)
+Millwall: 1.40 (45 games included)
+Watford: 1.37 (45 games included)
+Blackburn Rovers: 1.37 (45 games included)
+Swansea City: 1.37 (45 games included)
+Luton Town: 1.36 (45 games included)
+Sheffield United: 1.35 (45 games included)
+Coventry City: 1.34 (45 games included)
+West Bromwich Albion: 1.33 (45 games included)
+Queens Park Rangers: 1.32 (45 games included)
+Stoke City: 1.32 (45 games included)
+Hull City: 1.31 (45 games included)
+Sheffield Wednesday: 1.31 (45 games included)
+Bristol City: 1.30 (45 games included)
+Oxford United: 1.28 (45 games included)
+Portsmouth: 1.28 (45 games included)
+Cardiff City: 1.18 (45 games included)
+Middlesbrough: 1.16 (44 games included)
+```
+
+This is the data from the 24/25 championship season. The reason for the discrepancy in the number of
+games included is because occaisionally, sofascore will not include the recent form of the teams, for
+some reason. Although this only happened once all season in Middlesborough vs Sunderland, so it may
+be a once-off. Also the reason that the usual number of games included is 45 and not 46 (which is the
+number of rounds) is because there is obviously no recent form data for the first game of the
+season, so I've omitted it. This is a bit of a problem because it means that the results may be
+slightly skewed, depending on the fixture list. Another issue that I may address in the future
+is that the program does not currently give more weight to more recent fixtures, for example if a
+team is playing Liverpool and their recent form is LWWWW, it has the same value as if it was WWWWL,
+even though in the second example the loss is more recent, so it may be more relevant.
+
+In the future I may also add a feature where the overall average of the whole league is calculated,
+and displayed alongside the list, to add some context to the results. There is probably a way of 
+calculating this based on the draw rate in the league. (Update: there is, its 
+(3 * (1 - draw_rate / 2) + draw_rate), which in my example = 1.36. I will add this soon)
