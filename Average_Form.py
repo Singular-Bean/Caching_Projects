@@ -115,6 +115,7 @@ def get_match_forms(away_id_home):
 
     return away_id_home[2], formdata['homeTeam']['form'], away_id_home[0], formdata['awayTeam']['form']
 
+print("Put this in the terminal to start the caching server:\n" + run_in_terminal)
 
 leagueid, seasonid = get_league_id_and_season_id(
     input("Enter the name of the league you want to know the average form of teams against from "))
